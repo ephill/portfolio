@@ -1,0 +1,17 @@
+.main {
+  flex-grow: 1;
+  > :not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+
+.imageContainer {
+  min-width: 200px;
+  max-width: 200px;
+
+  > img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

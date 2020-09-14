@@ -1,15 +1,20 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import { Header } from "../components/Header";
+import { Job } from "../components/Job";
+import jobData from "../data/jobs";
 
 const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
-  </Layout>
-)
+  <div className="min-h-screen">
+    <Header />
+    <section>
+      {jobData.map((j, i) => (
+        <Job
+          key={i}
+          className={i % 2 === 0 ? "bg-gray-200" : "bg-gray-300"}
+          {...j}
+        />
+      ))}
+    </section>
+  </div>
+);
 
-export default IndexPage
+export default IndexPage;
