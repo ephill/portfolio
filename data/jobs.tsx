@@ -1,4 +1,4 @@
-import { IJobProps, Job } from "../components/Job";
+import { IJobProps } from "../components/Job";
 
 const JobData: IJobProps[] = [
   {
